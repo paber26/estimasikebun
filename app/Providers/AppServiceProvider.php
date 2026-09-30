@@ -19,6 +19,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $dbPath = database_path('database.sqlite');
+        if (!file_exists($dbPath) || filesize($dbPath) === 0) {
+            $sourceDb = base_path('kebun_simulasi.sqlite');
+            if (file_exists($sourceDb)) {
+                copy($sourceDb, $dbPath);
+            } else {
+                touch($dbPath);
+            }
+        }
     }
 }
