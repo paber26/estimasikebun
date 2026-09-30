@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="{{ asset('style.css') }}?v={{ time() }}">
+    <link rel="stylesheet" href="/style.css?v={{ time() }}">
 </head>
 <body>
 
@@ -353,6 +353,6 @@
     <!-- TOAST NOTIFICATION CONTAINER -->
     <div id="toastContainer" class="toast-container"></div>
 
-    <script src="{{ asset('app.js') }}?v={{ time() }}"></script>
+    <script src="/app.js?v={{ time() }}"></script>
 </body>
 </html>

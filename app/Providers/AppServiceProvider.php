@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (request()->header('X-Forwarded-Proto') === 'https' || app()->environment('production')) {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
+
         $dbPath = database_path('database.sqlite');
         if (!file_exists($dbPath) || filesize($dbPath) === 0) {
             $sourceDb = base_path('kebun_simulasi.sqlite');
