@@ -6,7 +6,7 @@ set -e
 SERVER_HOST="203.145.35.13"
 SERVER_USER="tmc"
 APP_PATH="/var/www/estimasikebun.kuydinas.id"
-REPO_URL="https://github.com/aldohalada19/estimasi.git"
+REPO_URL="https://github.com/paber26/estimasikebun.git"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 if [ -f "${SCRIPT_DIR}/.env.deploy" ]; then
